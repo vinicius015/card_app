@@ -27,11 +27,29 @@ class MyApp extends StatelessWidget{
             ),
             Text('Pseudo Árbitro',
             style: TextStyle(
-              fontSize: 20,
+              fontSize: 25,
               color: Colors.grey,
               fontWeight: FontWeight.bold
               ),
             ),
+            Card(
+              child: Padding(
+                padding: EdgeInsets.all(12.0),
+                child: Row(
+                  children: [
+                    Icon(
+                      Icons.phone,
+                      color: Colors.black
+                      ),
+                    Text('+55 (11) 91234-5678',
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 20
+                    ),)
+                  ],
+                ),
+              ),
+            )
           ],
         ),
       ),
