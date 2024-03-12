@@ -10,47 +10,77 @@ class MyApp extends StatelessWidget{
     return const MaterialApp(
       home: Scaffold(
         backgroundColor: Colors.yellowAccent,
-        body: Column(
-          children: [
-            CircleAvatar(
-              radius: 60,
-              backgroundImage: AssetImage(
-                'images/wilton-pereira-sampaio.jpg',
-              ),
-            ),
-            Text('Wilton Pereira Sampaio',
-            style: TextStyle(
-              fontSize: 35,
-              color: Colors.black,
-              fontWeight: FontWeight.bold
-              ),
-            ),
-            Text('Pseudo Árbitro',
-            style: TextStyle(
-              fontSize: 25,
-              color: Colors.grey,
-              fontWeight: FontWeight.bold
-              ),
-            ),
-            Card(
-              child: Padding(
-                padding: EdgeInsets.all(12.0),
-                child: Row(
-                  children: [
-                    Icon(
-                      Icons.phone,
-                      color: Colors.black
-                      ),
-                    Text('+55 (11) 91234-5678',
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 20
-                    ),)
-                  ],
+        body: Padding(
+          padding: EdgeInsets.all(10.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              CircleAvatar(
+                radius: 60,
+                backgroundImage: AssetImage(
+                  'images/wilton-pereira-sampaio.jpg',
                 ),
               ),
-            )
-          ],
+              Text('Wilton Pereira Sampaio',
+              style: TextStyle(
+                fontSize: 35,
+                color: Colors.black,
+                fontWeight: FontWeight.bold
+                ),
+              ),
+              Text('Pseudo Árbitro',
+              style: TextStyle(
+                fontSize: 25,
+                color: Colors.grey,
+                fontWeight: FontWeight.bold
+                ),
+              ),
+              Card(
+                child: Padding(
+                  padding: EdgeInsets.all(12.0),
+                  child: Row(
+                    children: [
+                      Icon(
+                        Icons.phone,
+                        color: Colors.black
+                      ),
+                      SizedBox(
+                          width: 20,
+                      ),
+                      Text('+55 (11) 91234-5678',
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 20
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+              ),
+              Card(
+                child: Padding(
+                  padding: EdgeInsets.all(12.0),
+                  child: Row(
+                    children: [
+                      Icon(
+                        Icons.email,
+                        color: Colors.black
+                      ),
+                      SizedBox(
+                          width: 20,
+                      ),
+                      Text('wiltonpsampaio@arbitro.com',
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 20
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );
