@@ -25,15 +25,18 @@ class MyApp extends StatelessWidget{
               style: TextStyle(
                 fontSize: 35,
                 color: Colors.black,
-                fontWeight: FontWeight.bold
+                fontWeight: FontWeight.bold,
+                fontFamily: 'Pacifico'
                 ),
               ),
               Text('Pseudo Árbitro',
               style: TextStyle(
-                fontSize: 25,
-                color: Colors.grey,
-                fontWeight: FontWeight.bold
+                fontSize: 22,
+                color: Colors.grey
                 ),
+              ),
+              SizedBox(
+                height: 10,
               ),
               Card(
                 child: Padding(
