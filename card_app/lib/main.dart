@@ -4,13 +4,52 @@ void main() {
   runApp(MyApp());
 }
 
-class MyApp extends StatelessWidget{
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       home: Scaffold(
         backgroundColor: Colors.yellowAccent,
-        body: Padding(
+        appBar: AppBar(
+          title: const Text('Card App'),
+        ),
+        drawer: Drawer(
+          child: ListView(
+            padding: EdgeInsets.zero,
+            children: [
+              const DrawerHeader(
+                decoration: BoxDecoration(
+                  color: Colors.black,
+                ),
+                child: Text(
+                  'Menu',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 24,
+                  ),
+                ),
+              ),
+              ListTile(
+                title: const Text('Telefone',
+                style: TextStyle (
+                  color: Colors.white 
+                  ),
+                ),
+                onTap: () {
+                  // Lógica para executar quando essa opção for selecionada
+                },
+              ),
+              ListTile(
+                title: Text('Email'),
+                onTap: () {
+                  // Lógica para executar quando essa opção for selecionada
+                },
+              ),
+              // Adicione mais ListTiles conforme necessário para mais opções no menu
+            ],
+          ),
+        ),
+        body: const Padding(
           padding: EdgeInsets.all(10.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -21,18 +60,20 @@ class MyApp extends StatelessWidget{
                   'images/wilton-pereira-sampaio.jpg',
                 ),
               ),
-              Text('Wilton Pereira Sampaio',
-              style: TextStyle(
-                fontSize: 35,
-                color: Colors.black,
-                fontWeight: FontWeight.bold,
-                fontFamily: 'Pacifico'
+              Text(
+                'Wilton Pereira Sampaio',
+                style: TextStyle(
+                  fontSize: 35,
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold,
+                  fontFamily: 'Pacifico',
                 ),
               ),
-              Text('Pseudo Árbitro',
-              style: TextStyle(
-                fontSize: 22,
-                color: Colors.grey
+              Text(
+                'Pseudo Árbitro',
+                style: TextStyle(
+                  fontSize: 22,
+                  color: Colors.grey,
                 ),
               ),
               SizedBox(
@@ -43,18 +84,13 @@ class MyApp extends StatelessWidget{
                   padding: EdgeInsets.all(12.0),
                   child: Row(
                     children: [
-                      Icon(
-                        Icons.phone,
-                        color: Colors.black
-                      ),
+                      Icon(Icons.phone, color: Colors.black),
                       SizedBox(
-                          width: 20,
+                        width: 20,
                       ),
-                      Text('+55 (11) 91234-5678',
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 20
-                        ),
+                      Text(
+                        '+55 (11) 91234-5678',
+                        style: TextStyle(color: Colors.black, fontSize: 20),
                       )
                     ],
                   ),
@@ -65,18 +101,13 @@ class MyApp extends StatelessWidget{
                   padding: EdgeInsets.all(12.0),
                   child: Row(
                     children: [
-                      Icon(
-                        Icons.email,
-                        color: Colors.black
-                      ),
+                      Icon(Icons.email, color: Colors.black),
                       SizedBox(
-                          width: 20,
+                        width: 20,
                       ),
-                      Text('wiltonpsampaio@arbitro.com',
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 20
-                        ),
+                      Text(
+                        'wiltonpsampaio@arbitro.com',
+                        style: TextStyle(color: Colors.black, fontSize: 20),
                       )
                     ],
                   ),
