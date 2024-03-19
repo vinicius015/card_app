@@ -32,20 +32,21 @@ class MyApp extends StatelessWidget {
               ListTile(
                 title: const Text('Telefone',
                 style: TextStyle (
-                  color: Colors.white 
+                  color: Colors.black 
                   ),
                 ),
                 onTap: () {
-                  // Lógica para executar quando essa opção for selecionada
                 },
               ),
               ListTile(
-                title: Text('Email'),
+                title: const Text('Email',
+                style: TextStyle (
+                  color: Colors.black 
+                  ),
+                ),
                 onTap: () {
-                  // Lógica para executar quando essa opção for selecionada
                 },
               ),
-              // Adicione mais ListTiles conforme necessário para mais opções no menu
             ],
           ),
         ),
